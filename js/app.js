@@ -78,7 +78,7 @@ let slider_about = new Swiper('.main-screen__slider', {
     observeParents: true,
     slidesPerView: 1,
     spaceBetween: 0,
-    autoHeight: true,
+    // autoHeight: true,
     speed: 2500,
     // parallax: true,
     //touchRatio: 0,
@@ -1681,9 +1681,10 @@ function scroll_scroll() {
             if ((src_value > scr_item_offset - scr_item_point) && src_value < (scr_item_offset + scr_item_height)) {
                 scr_item.classList.add('_active');
                 scroll_load_item(scr_item);
-            } else {
-                scr_item.classList.remove('_active');
             }
+            // else {
+            // scr_item.classList.remove('_active');
+            // }
             if (((src_value > scr_item_offset - window.innerHeight))) {
                 if (scr_item.querySelectorAll('._lazy').length > 0) {
                     scroll_lazy(scr_item);
